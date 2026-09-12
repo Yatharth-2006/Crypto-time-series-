@@ -1,0 +1,12 @@
+[package]
+name = "rustllm"
+version = "0.1.0"
+edition = "2021"
+
+# Zero external dependencies on purpose — same philosophy as llama.cpp:
+# a self-contained binary that only needs libc + the standard library.
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
